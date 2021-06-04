@@ -13,7 +13,8 @@ function getClass(items) {
   for (let index = 0; index < items.length; index++) {
     const element = items[index]
     let classNumber = (index + 1 > 9) ? index + 1 : '0' + (index + 1)
-    commands.push(`curl --cookie "JSESSIONID=%7B%22persistedTime%22%3A1622731641649%2C%22" "${element.videoUrl}" --output "download/8${classNumber}-${element.name}.mp4" --limit-rate 1024K`)
+    // commands.push(`curl --cookie "JSESSIONID=%7B%22persistedTime%22%3A1622731641649%2C%22" "${element.videoUrl}" --output "download/8${classNumber}-${element.name}.mp4" --limit-rate 1024K`)
+    commands.push(`curl --cookie "JSESSIONID=%7B%22persistedTime%22%3A1622731641649%2C%22" "${element.videoUrl}" --output "download/8${classNumber}-${element.name}.mp4"`)
     // commands.push(`echo ${element.name}`)
   }
   console.log(commands)
