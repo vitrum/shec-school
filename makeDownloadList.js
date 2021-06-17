@@ -20,8 +20,8 @@ function getClass(items) {
     const element = items[index]
     let classNumber = (index + 1 > 9) ? index + 1 : '0' + (index + 1)
     let fileName = element.name.replace(pattern, '')
-    // commands.push(`curl --cookie "JSESSIONID=%7B%22persistedTime%22%3A1622731641649%2C%22" "${element.videoUrl}" --output "download/8${classNumber}-${element.name}.mp4" --limit-rate 1024K`)
-    commands.push(`curl --cookie "JSESSIONID=%7B%22persistedTime%22%3A1622731641649%2C%22" "${element.videoUrl}" --output "download/8${classNumber}-${fileName}.mp4"`)
+    commands.push(`curl --cookie "JSESSIONID=%7B%22persistedTime%22%3A1622731641649%2C%22" "${element.videoUrl}" --output "download/8${classNumber}-${element.name}.mp4" --limit-rate 1024K`)
+    // commands.push(`curl --cookie "JSESSIONID=%7B%22persistedTime%22%3A1622731641649%2C%22" "${element.videoUrl}" --output "download/8${classNumber}-${fileName}.mp4"`)
     classFileName.push(`download/8${classNumber}-${fileName}.mp4`)
     // commands.push(`echo ${element.name}`)
   }
